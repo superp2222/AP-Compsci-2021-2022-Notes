@@ -1,12 +1,8 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class RPSGame {
     public static void main(String[] args) {
-        /*Note to Lu: I've done this before as part of the VLN online class for Prog. 11
-        Most of the features with the Strings come from that class (eg playerFinal and compFinal),
-        but for the rest of it, I basically
-        made a new RPS game following your instructions from scratch but re-incorporated some of the
-        string shenanigans into this version*/
         String username;
         int gameRounds = 0;
         String compFinal = "";
@@ -17,7 +13,6 @@ public class RPSGame {
         int compScore = 0;
         int ties = 0;
         Scanner scan = new Scanner(System.in);
-
 
         System.out.println("Welcome to Rock Paper Scissors, please enter a username to get started");
         username = scan.next();

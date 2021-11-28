@@ -52,23 +52,11 @@ public class PigGame {
                     playerOneSum = 0;
                     playAgain = false;
                 }else if(diceOne == 6 || diceTwo == 6){
-                    System.out.println("A Six! No additions this round!");
+                    System.out.println("A Six! No additions this round!\nTurn Ends!");
                     System.out.println("\nYour Rolls Are: ");
                     System.out.println(diceOne + " & " + diceTwo);
                     System.out.println("Current sum: "+playerOneSum);
-                    if (playerOneSum < 100) {
-                        System.out.println("Do you wish to play again?\n Enter 1 for Yes and 2 for No");
-                        playerResponse = 0;
-                        while ((playerResponse != 1) && (playerResponse != 2)) {
-                            playerResponse = scan.nextInt();
-                            if (playerResponse == 1) playAgain = true;
-                            else if (playerResponse == 2) playAgain = false;
-                            else {
-                                System.out.println("Invalid Choice, try again?");
-                                playerResponse = scan.nextInt();
-                            }
-                        }
-                    }
+                   playAgain = false;
                 }else{
                     playerOneSum += diceOne + diceTwo;
                     System.out.println("\nYour Rolls Are: ");
@@ -132,23 +120,11 @@ public class PigGame {
                         playerTwoSum = 0;
                         playAgain = false;
                     } else if (diceOne == 6 || diceTwo == 6) {
-                        System.out.println("A Six! No additions this round!");
+                        System.out.println("A Six! No additions this round!\nTurn Ends!");
                         System.out.println("\nYour Rolls Are: ");
                         System.out.println(diceOne + " & " + diceTwo);
                         System.out.println("Current sum: " + playerTwoSum);
-                        if (playerTwoSum < 100) {
-                            System.out.println("Do you wish to play again?\n Enter 1 for Yes and 2 for No");
-                            playerResponse = 0;
-                            while ((playerResponse != 1) && (playerResponse != 2)) {
-                                playerResponse = scan.nextInt();
-                                if (playerResponse == 1) playAgain = true;
-                                else if (playerResponse == 2) playAgain = false;
-                                else {
-                                    System.out.println("Invalid Choice, try again?");
-                                    playerResponse = scan.nextInt();
-                                }
-                            }
-                        }
+                        playAgain = false;
                     } else {
                         playerTwoSum += diceOne + diceTwo;
                         System.out.println("\nYour Rolls Are: ");
