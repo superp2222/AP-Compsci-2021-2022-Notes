@@ -38,15 +38,35 @@ public class ShapeCalc {
     }
     public ShapeCalc(String shapeName){
         numTimesUsed++;
-        shapeName = this.shapeName;
+        this.shapeName = shapeName;
     }
 
     //A static method called circleInfo which takes one parameter and prints the circumference and area of the circle
-    public static double circleInfo(double radius){
-        return 23;
+    public static void circleInfo(double radius){
+        System.out.println("Circumference: " + (Math.PI * 2 * radius));
+        System.out.println("Area: " + (Math.PI * Math.pow(radius, 2)));
     }
     //A static method called rectangleInfo which accepts 2 parameters and prints perimeter and area
+    public static void rectangleInfo(double length, double width){
+        System.out.println("Perimeter: " + ((2*length)+(2)+(2*width)));
+        System.out.println("Area: "+ (length * width));
+    }
+    //A static method called cylinderInfo which accepts 3 parameters and prints surface area and volume
+    public static void cylinderInfo(double radius, double height, double width){
+        System.out.println("Surface Area: " + ((2*Math.PI*radius*height)+(2*Math.PI*Math.pow(radius, 2))));
+        System.out.println("Volume: "+ (Math.PI*height*Math.pow(radius, 2)));
+    }
 
+    public static int getNumTimesUsed() {
+        return numTimesUsed;
+    }
+    //Why was it useful to make this method static? Explain
+    //It was useful because you simply want to know how many times an object has been created
+    //It wouldnt make sense to create a new object every time you want to check
+    //that would just be a waste of memory
+    //instead, it would be much easier to make it static
+    //so you can reference it with ShapeCalc.getNumTimesUsed
+    //that way you can check without creating a new object every time
 
     @Override
     public String toString() {
