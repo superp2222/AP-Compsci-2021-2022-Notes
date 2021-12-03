@@ -29,9 +29,18 @@ public class CasinoPlayer {
         this.bet = bet;
     }
 
+    public void deposit(double deposit){
+        balance += deposit;
+    }
+    public void withdraw(double withdraw){
+        checkBalance(withdraw);
+    }
+
+
     public int randomGenerator(int high, int low){
         return (int)(Math.random()*(high-low+1)+low);
     }
+    
     private void checkBet(int max){
         if(bet > balance) System.out.println("Bet exceeds balance!");
         if(bet > max) System.out.println("Bet over max value!");
