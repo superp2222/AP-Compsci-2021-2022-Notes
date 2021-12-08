@@ -4,6 +4,7 @@ public class CasinoPlayer {
     public double balance;
     public String name;
     double bet = 0;
+    public double inHand = 0;
     public CasinoPlayer(){
         name = "Allen Who?";
         balance = 0.0;
