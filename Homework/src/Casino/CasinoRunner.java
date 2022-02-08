@@ -6,8 +6,8 @@ public class CasinoRunner {
         person.betAMT(2000);
         person.Helper();
         person.betAMT(10);
-        person.Play(5);
-        person.Play(20);
+        person.Play(7);
+        person.Play(39);
         person.betAMT(20);
         person.Play(5);
         System.out.println(person.getMoney());
